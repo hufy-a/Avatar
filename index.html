@@ -83,39 +83,42 @@
     	left: 50%;
     	transform: translateX(-50%); 
 	 }
-	 @media screen and (max-width: 768px) {
-    	.button-container {
-        	flex-direction: column;
-        	align-items: flex-start;
-        	margin: 30px 10px 0 10px;
-    	 }
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 10px;
+        text-align: center;
+    }
 
-    	.film-info {
-        	max-width: 100%;
-        	font-size: 1.6rem;
-        	padding: 25px;
-			line-heigth: 2;
-    	 }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 40%;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
 
-    	.bouton-right {
-        	margin-top: 20px;
-        	width: auto;
-        	padding: 25px 55px;
-        	font-size: 1.6rem;
-    	 }
+    .button-container a {
+        width: 100%;
+        padding: 25px;
+        font-size: 1.5rem;
+    }
 
-    	.trilogie-info {
-        	max-width: 95%;
-       	 	font-size: 1.4rem;
-        	padding: 25px;
-        	bottom: 10px;
-    	 }
-		 .title {
-			 font-size: 3.2rem;
-			 top: 10px;
-		 }
-			 
-	 }
+    .trilogie-info {
+        width: 60%;
+        font-size: 1.6rem;
+        line-height: 2;
+        margin-top: 0;
+    }
+
+   
+    body > .button-container, .trilogie-info {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
 
 
 
@@ -148,5 +151,6 @@
 	</p>
 </body>
 </html>
+
 
 
