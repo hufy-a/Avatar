@@ -84,26 +84,39 @@
     	transform: translateX(-50%); 
 	 }
 @media screen and (max-width: 768px) {
+
+    /* TITRE */
     h1 {
-        font-size: 2rem;
-        margin-top: 10px;
-        text-align: left;
+        font-size: 1.8rem;
+        margin: 10px 10px 20px 10px; /* en haut et petits côtés */
+        text-align: center;
+        position: relative;           /* pas fixed pour mobile */
+        transform: none;
     }
 
-    .button-container {
-		width: 110px;
-		height: 260px;
-		flex-direction: column;
+    /* CONTENEUR PRINCIPAL BOUTONS + TEXTE */
+    .mobile-container {
         display: flex;
-        position: absolute;
-		top: -100px;
-		left: 20px;
+        flex-direction: row;      /* boutons à gauche, texte à droite */
+        justify-content: space-between;
+        align-items: flex-start;  /* top align */
+        gap: 10px;
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+
+    /* BLOC BOUTONS VERTICAUX */
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 40%;               /* 40% largeur pour les boutons */
     }
 
     .button-container a {
         width: 100%;
-        padding: 25px 10px;
-        font-size: 1.5rem;
+        padding: 15px 10px;
+        font-size: 1.4rem;
         text-align: center;
         border-radius: 10px;
         background-color: rgba(0,0,0,0.2);
@@ -111,31 +124,24 @@
         box-shadow: 2px 2px 5px black;
     }
 
-        .trilogie-info {
-    	width: 60%;
-    	font-size: 1.2rem;
-    	line-height: 1.6;
-    	text-align: left;
-    	position: relative;       /* plus absolute, le bloc prend la hauteur du texte */
-   	 	margin-top: 20px;         /* descend le texte sous le titre */
-    	margin-left: auto;         /* pour coller à droite */
-    	margin-right: 20px;
-    	background: rgba(0,0,0,0.6);
-    	padding: 20px;
-    	border-radius: 12px;
-	}
     .button-container img {
-        width: 150;
-        height: 500px;
+        width: 100%;
+        height: auto;
         border-radius: 5px;
         margin-bottom: 5px;
     }
-	.button-container a p {
-    color: white;        /* texte des titres des films en blanc */
-    font-weight: bold;   /* optionnel : pour qu'ils ressortent mieux */
-    margin: 0;
-    text-align: rigth;
-}
+
+    /* BLOC TEXTE A DROITE */
+    .trilogie-info {
+        width: 60%;               /* 60% pour le texte */
+        font-size: 1rem;
+        line-height: 1.5;
+        background: rgba(0,0,0,0.6);
+        padding: 15px;
+        border-radius: 12px;
+        color: white;
+        text-align: left;
+    }
 }
 
 	</style>
@@ -167,6 +173,7 @@
 	</p>
 </body>
 </html>
+
 
 
 
