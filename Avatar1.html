@@ -83,35 +83,65 @@
     	background: rgba(255,255,255,0.4);
 	 }
 	@media screen and (max-width: 768px) {
-    .film-container {
+
+    /* TITRE */
+    h1 {
+        font-size: 1.8rem;    /* un peu plus petit pour mobile */
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    /* BLOC BOUTONS */
+    .button-container {
+        width: 110px;         /* largeur du bloc des boutons */
         flex-direction: column;
-        align-items: flex-start;
-        margin: 30px 10px 0 10px;
+        display: flex;
+        position: absolute;
+        top: 35px;            /* monte plus les boutons */
+        left: 20px;
+        gap: 15px;
     }
 
-    .film-info {
-        max-width: 100%;
-        font-size: 1.2rem;
-        padding: 30px;
-        line-height: 2;
+    .button-container a {
+        width: 100%;
+        padding: 20px 10px;   /* bouton plus long que large */
+        font-size: 1.4rem;    /* réduit un peu le texte du bouton */
+        text-align: center;
+        border-radius: 10px;
+        background-color: rgba(0,0,0,0.2);
+        color: white;
+        box-shadow: 2px 2px 5px black;
     }
 
-    .bouton-right {
-		display: inline-block;
-        width: auto;
-        padding: 25px 55px;
-        font-size: 1.6rem;
-        margin-top: 20px;
-		texte-align: center;
+    .button-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 5px;
     }
 
-    .title {
-        font-size: 3.5rem;
-        top: 10px;
-		color: white;
+    .button-container a p {
+        color: white;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* BLOC TEXTE */
+    .trilogie-info {
+        width: 60%;
+        font-size: 1rem;         /* réduit la taille du texte pour mobile */
+        line-height: 1.5;
+        text-align: left;
+        position: relative;       /* s’adapte à la hauteur du texte */
+        margin-top: 60px;         /* descend le texte sous le titre */
+        margin-left: auto;        /* pousse le bloc vers la droite */
+        margin-right: 20px;       /* espace à droite */
+        background: rgba(0,0,0,0.6);
+        padding: 15px;
+        border-radius: 12px;
     }
 }
-
 
 </style>
 </head>
@@ -137,6 +167,7 @@
 </body>
 
 </html>
+
 
 
 
