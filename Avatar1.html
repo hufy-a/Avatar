@@ -84,30 +84,46 @@
 	 }
 	@media screen and (max-width: 768px) {
 
-	.title {
-		position: relative;
-		top: -200px;
-		left: 10 px
-		font-size: 2.5rem;	
-	}
-	.film-info {
-	display: none;
-	}
-	.boutton-right{
-	position: relative;
-	
-	}
-	.button-acceuil {
-	position: relative;
-	top: -200px;
-	
-	}
-	.button-right {
-	color: black;
-	top: 20px;
-	}
-	
-	}
+    /* TITRE */
+    .title {
+        font-size: 2.5rem;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+
+    /* BOUTON ACCUEIL */
+    .bouton-accueil {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        color: black;          /* texte en noir */
+        margin-left: 10px;     /* le remonte légèrement */
+        margin-top: 10px;
+    }
+
+    /* TEXTE DU FILM */
+    .film-info {
+        font-size: 1rem;
+        padding: 15px;
+        margin: 10px 10px 0 10px;
+    }
+
+    /* BOUTON BANDE-ANNONCE */
+    .bouton-right {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        margin: 10px 10px 20px 10px; /* juste sous le texte */
+        display: inline-block;        /* indépendant */
+    }
+
+    /* CONTENEUR FILM */
+    .film-container {
+        display: flex;
+        flex-direction: column; /* texte puis bouton */
+        gap: 10px;              /* espace entre texte et bouton */
+        margin: 0 10px;
+    }
+}
+
 	
 </style>
 </head>
@@ -133,6 +149,7 @@
 </body>
 
 </html>
+
 
 
 
